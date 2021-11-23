@@ -1,11 +1,13 @@
 /* program to detect temperatures above 35oC. When it happened, the LED turn on and give some sound output.
-the type of microcontroller used is arduino uno, the sensor used is a dht11 temperature sensor and a buzzer to make sound
+*Board  : Arduino UNO
+*Sensor : DHT11,
+*Output : LED, Buzzer
 */ 
 
-#include <DHT.h>
+#include <DHT.h>             // Library DHT
 #define DHTPIN 7             // DHT11 pin D7
-#define DHTTYPE DHT11
-DHT dht(DHTPIN,DHTTYPE);
+#define DHTTYPE DHT11        // type sensor DHT11
+DHT dht(DHTPIN,DHTTYPE);     // set sensor + pin
 
 int ledR=2;                 //LED pin D2
 int buzzer=6;               //buzzer pin D6
